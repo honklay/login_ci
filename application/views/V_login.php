@@ -13,7 +13,8 @@
   <body>
  
     <div class="container">
-        <div class="col-md-4 col-md-offset-4">
+	<div class="row">
+        <div class="col-md-4 col-md-offset-4" style="width:50%; padding: 80px 15px 20px 15px ; text-align: left; margin: auto;">
           <form class="form-signin" action="<?php echo base_url().'login/auth'?>" method="post">
             <h2 class="form-signin-heading">Please sign in</h2>
             <?php echo $this->session->flashdata('msg');?>
@@ -29,6 +30,7 @@
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
           </form>
         </div>
+		</div>
         </div> <!-- /container -->
  
  

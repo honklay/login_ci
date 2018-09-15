@@ -42,15 +42,53 @@
           </table>
         </div>
       </div>
-    </div> <!-- /container -->
- 
- 
+    
+	<div class="col-md-4">
+	<div class="row">
+	<select class="form-control" id="semester">
+		<option value="1">1 Semester</option>
+		<option value="2" selected>2 Semester</option>
+		<option value="3">3 Semester</option>
+	</select>		
+	</div>
+	</div>
+	
+	<div class="col-md-4">
+	<div class="row">
+	<form>
+	<div class="form-group">
+	<label for="inputtext">Value Text</label>
+	<input class="form-control" type="text" id="inputtext" placeholder="isi dari selected">
+	</div>
+	</form>
+	</div>
+	</div>
+	
+	<div id="isi">
+		<p>isi</p>
+	</div>
+	
+	</div> <!-- /container -->
+	
+	</body>
+	
     <!-- jQuery-->
 	<script src="<?php echo base_url()?>assets/bootstrap4/js/popper.min.js"></script>
 	<script src="<?php echo base_url()?>assets/bootstrap4/js/jquery-3.3.1.min.js"></script>
 	    
     <!-- Bootsrap -->
     <script src="<?php echo base_url()?>assets/bootstrap4/js/bootstrap.min.js"></script>
- 
-  </body>
+	
+	<script>
+	$(document).ready(function(){
+    $("#semester").change(function(){
+		var nilai = $("#semester option:selected").val() ;
+		var text1 = $("#semester option:selected").text() ;
+		console.log(nilai) ;
+		$("#inputtext").val(nilai);
+        $("#isi").text(text1);
+    });    
+	});
+	</script>
+	  
 </html>
